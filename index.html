@@ -3,8 +3,27 @@
 <head lang="en">
 	<meta charset="UTF-8">
 	<title>Hello</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 </head>
 <body>
 <h1>hello webstorm</h1>
+<div ng-app="" ng-init="firstname='steven';quantity=1;price=5;
+dollar_1000=0;dollar_500=0;dollar_100=0;dollar_10=0;dollar_5=0;dollar_1=0">
+	name: <input type="text" ng-model="firstname"/><br/>
+	1000 x <input type="text" ng-model="dollar_1000"/><br/>
+	500 x <input type="text" ng-model="dollar_500"/><br/>
+	100 x <input type="text" ng-model="dollar_100"/><br/>
+	10 x <input type="text" ng-model="dollar_10"/><br/>
+	5 x <input type="text" ng-model="dollar_5"/><br/>
+	1 x <input type="text" ng-model="dollar_1"/><br/>
+	<p>you wrote : {{ firstname }}</p>
+	<p>count : {{ dollar_1000 * 1000 + dollar_500 * 500 + dollar_100 * 100 + dollar_10 * 10 + dollar_5 * 5 + dollar_1 * 1}}</p>
+
+Quantity: <input type="number" ng-model="quantity"><br/>
+Costs:    <input type="number" ng-model="price"><br/>
+
+Total in dollar: {{ quantity * price }}
+
+</div>
 </body>
 </html>
