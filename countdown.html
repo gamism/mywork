@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+
+<script>
+	var i = 15, t;
+	t = setInterval(function(){
+		if(i > 0)
+		{
+			document.getElementById('countdown').innerHTML="系統將於 "+i+" 秒後自動轉址...";
+			i-=1;
+		}
+		else
+		{
+			clearInterval(t);
+			var href = window.location.href.split("/");
+			location.replace('../../index.php?redirect='+href[href.length - 1]);
+		}
+
+	}, 1000)
+</script>
+<font size=3 color=red><b>童軍論壇</b>已搬家.....</font>
+<p id="countdown" style="color:blue; font-size:12pt;">系統將於
+	<script>document.write(i)</script> 秒後自動轉址...</p>
+<p style="color:blue; font-size:12pt;"><a href="http://playlins.synology.me/scoutbbs">直接前往</a></p>
+</body>
+</html>
