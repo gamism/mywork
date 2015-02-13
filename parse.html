@@ -2,16 +2,25 @@
 <html>
 <head lang="en">
 	<meta charset="UTF-8">
-	<title></title>
+	<title>CONVERT</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
 
-<h1>Quick Converter</h1>
-<textarea name="convert" id="convert" cols="60" rows="20" onblur="convert()">
-	
+<fieldset>
+	<legend><h1>Quick Converter</h1></legend>
+	<table>
+		<tr>
+			<td style="padding: 0 20px 0 20px; vertical-align: top;">
+				<textarea name="convert" id="convert" cols="60" rows="30" onblur="convert()">
 </textarea>
-<hr/>
-<p id="result"></p>
+			</td>
+			<td style="border-left: 1px solid dimgray; padding: 0 20px 0 20px; vertical-align: top;">
+				<p id="result"></p>
+			</td>
+		</tr>
+	</table>
+</fieldset>
 <script>
 	function convert()
 	{
